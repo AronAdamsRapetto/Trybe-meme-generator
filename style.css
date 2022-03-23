@@ -1,0 +1,9 @@
+#meme-image-container {
+    width: 400px;
+    height: 350px;
+    border: 1px solid black;
+}
+
+#meme-text {
+    word-wrap: break-word;
+}
