@@ -28,19 +28,28 @@ input {
   text-shadow: 5px 5px 5px black;
 }
 
-#meme-image {
+#meme-image, #meme-1, #meme-2, #meme-3, #meme-4 {
   width: 100%;
   height: 100%;
 }
 
 #fire {
   border: 3px dashed red;
+  background-color: red;
 }
 
 #water {
   border: 5px double blue;
+  background-color: blue;
 }
 
 #earth {
   border: 6px groove green;
+  background-color: green;
+}
+
+.bloco-memes {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
 }

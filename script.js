@@ -3,6 +3,10 @@ const inputArquivo = document.getElementById('meme-insert');
 const botaoBordaFire = document.getElementById('fire');
 const botaoBordaWater = document.getElementById('water');
 const botaoBordaEarth = document.getElementById('earth');
+const imagemMeme1 = document.getElementById('meme-1');
+const imagemMeme2 = document.getElementById('meme-2');
+const imagemMeme3 = document.getElementById('meme-3');
+const imagemMeme4 = document.getElementById('meme-4');
 
 function adicionaTexto() {
   const textoImagem = document.getElementById('meme-text');
@@ -15,9 +19,15 @@ function addImagem(event) {
 }
 
 function alteraBorda(event) {
-  document.getElementById('meme-image-container').style.border = event.target.style.border;
-  console.log(document.getElementById('meme-image-container').style.border);
-  console.log(event.target.style.border);
+  const boxImg = document.getElementById('meme-image-container');
+  const estiloBotao = window.getComputedStyle(event.target).getPropertyValue('border');
+  boxImg.style.border = estiloBotao;
+  console.log(boxImg.style);
+}
+
+function selecionaImagem(event) {
+  const imagemMeme = document.getElementById('meme-image');
+  imagemMeme.src = event.target.src;
 }
 
 inputArquivo.addEventListener('change', addImagem);
@@ -27,3 +37,8 @@ inputTexto.addEventListener('keyup', adicionaTexto);
 botaoBordaFire.addEventListener('click', alteraBorda);
 botaoBordaWater.addEventListener('click', alteraBorda);
 botaoBordaEarth.addEventListener('click', alteraBorda);
+
+imagemMeme1.addEventListener('click', selecionaImagem);
+imagemMeme2.addEventListener('click', selecionaImagem);
+imagemMeme3.addEventListener('click', selecionaImagem);
+imagemMeme4.addEventListener('click', selecionaImagem);
