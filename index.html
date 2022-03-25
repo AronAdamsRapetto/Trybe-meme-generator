@@ -11,18 +11,22 @@
     <header>
         <h1>Meme - Generator</h1>
     </header>
-    <section>
-        <input id="text-input" type="text" maxlength="60" placeholder="Insira o texto aqui">
-        <input id="meme-insert" type="file">       
+    <section id="box-main">
+        <div id="input-container">
+            <input id="text-input" type="text" maxlength="60" placeholder="Insira o texto aqui">
+            <input id="meme-insert" type="file">
+        </div>       
         <div id="meme-image-container">
             <img id="meme-image">
             <p id="meme-text"></p>
         </div>
-        <button id="fire">Fogo</button>
-        <button id="water">Água</button>
-        <button id="earth">Terra</button>
+        <div id="btn-container">
+            <button id="fire"></button>
+            <button id="water"></button>
+            <button id="earth"></button>
+        </div>
     </section>
-    <section>
+    <section id="imagens-container">
         <div class="bloco-memes">
             <img id="meme-1" src="imgs/meme1.png">
         </div>
